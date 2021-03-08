@@ -8,10 +8,12 @@ const unknowCommand = require('./scripts/unknowCommand');
 
 const permissions = config.permissions;
 
+//Bot pronto
 client.on('ready', () => {
     console.log('logado com o bot' + client.user.tag);
 });
 
+//le os comandos
 client.on('message', (msg) => {
 
     if(!msg.author.bot && msg.guild){
@@ -27,16 +29,19 @@ client.on('message', (msg) => {
 
 });
 
+//Membro adicionado no server
 client.on('guildMemberAdd', (member) => {
     const boasVindas = member.guild.channels.cache.get(config.boasVindasChannelId);
     boasVindas.send(`${member.user} acabou de entrar em nosso servidor 🥳`);
 });
 
+//Membro removido no server
 client.on('guildMemberRemove', (member) => {
     const boasVindas = member.guild.channels.cache.get(config.boasVindasChannelId);
     boasVindas.send(`${member.user} saiu do server 😥`);
 });
 
+//Verificacao de Permissao
 function verificarPermisao(member, command) {
     let verification = !permissions[command];
 
