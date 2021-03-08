@@ -2,8 +2,8 @@
     "debug": true,
     "prefix": "!",
 
-    "token": "seu token",
-    "boasVindasChannelId": "id boas vindas",
+    "token": "ODE4MjA0NzA5ODc3NzEwODg5.YEUqhA.OZaO0QCWwzcve7BBtYW5r-PNsyE",
+    "boasVindasChannelId": "818424235277287444",
 
     "permissions":{
         "!clear":[
