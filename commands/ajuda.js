@@ -4,7 +4,8 @@ const commands = require('../scripts/commandsReader')(config.prefix);
 const descriptions = {
     "!ajuda": "Use esse comando para ver todos os comandos disponiveis",
     "!clear": "Limpa o Chat",
-    "!ping": "Retorna o seu Ping"
+    "!ping": "Retorna o seu Ping",
+    "!roadmap": "Passa um roadmap sobre programacao"
 };
 
 module.exports = async (client, msg) => {
