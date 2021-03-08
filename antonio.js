@@ -2,11 +2,14 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 
 const config = require('./config.json');
-const commands = require('./scripts/comandsReader')(config.prefix);
+const commands = require('./scripts/commandsReader')(config.prefix);
 
 const unknowCommand = require('./scripts/unknowCommand');
 
 const permissions = config.permissions;
+
+client.commands = new Discord.Collection();
+client.queues = new Map();
 
 //Bot pronto
 client.on('ready', () => {
@@ -14,19 +17,16 @@ client.on('ready', () => {
 });
 
 //le os comandos
-client.on('message', (msg) => {
-
+client.on("message",(msg)=>{
     if(!msg.author.bot && msg.guild){
         if(config.debug) console.log(`${msg.author.username}: ${msg.content}`);
-
         const args = msg.content.split(" ");
-        if(commands[args[0]]) {
-            if(verificarPermisao(msg.member, args[0])) {
-                commands[args[0]](client,msg); 
-            } else msg.reply('Voce nao tem permisao para executar esse comando');
-        } else if(args[0].split("")[0] == config.prefix) unknowCommand(client,msg);
+        if(commands[args[0]]){
+            if(verificarPermisao(msg.member,args[0]))
+                commands[args[0]](client,msg);
+            else msg.reply("você não tem permissão para executar esse comando!");
+        }else if(args[0].startsWith(config.prefix)) unknowCommand(client,msg);
     }
-
 });
 
 //Membro adicionado no server

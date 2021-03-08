@@ -2,8 +2,9 @@
     "debug": true,
     "prefix": "!",
 
-    "token": "ODE4MjA0NzA5ODc3NzEwODg5.YEUqhA.WU1ybNXC1-Ls4PDw9k7SRB71N7w",
+    "token": "ODE4MjA0NzA5ODc3NzEwODg5.YEUqhA.CClo1fneS14AG4S0lAL6uv3qjos",
     "boasVindasChannelId": "818424235277287444",
+    "voiceChennalId": "818499554046902282",
 
     "permissions":{
         "!clear":[
