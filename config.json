@@ -1,0 +1,16 @@
+{
+    "debug": true,
+    "prefix": "!",
+
+    "token": "seu token",
+    "boasVindasChannelId": "id boas vindas",
+
+    "permissions":{
+        "!clear":[
+            {
+                "type": "permission",
+                "value": "ADMINISTRATOR"
+            }
+        ]
+    }
+}
