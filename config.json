@@ -2,9 +2,9 @@
     "debug": true,
     "prefix": "!",
 
-    "token": "ODE4MjA0NzA5ODc3NzEwODg5.YEUqhA.nXR652fFQqWuqIk8qGigRKqZ_sM",
-    "boasVindasChannelId": "818424235277287444",
-    "voiceChennalId": "818499554046902282",
+    "token": "seu token",
+    "boasVindasChannelId": "id do canal de boas vindas",
+    "voiceChennalId": "id do canal de voice - musica em construcao",
 
     "permissions":{
         "!clear":[
